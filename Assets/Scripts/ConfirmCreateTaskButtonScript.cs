@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using TMPro;
 
 public class ConfirmCreateTaskButtonScript : MonoBehaviour
@@ -29,8 +27,9 @@ public class ConfirmCreateTaskButtonScript : MonoBehaviour
 
         // save task definition / serialize
         // if name is not unique, inform user
+        TaskManagerScript.Instance.AddNewTaskDefinition(newTaskDefinition);
 
         // confirm creation/success/potentially go back to previous scene
-        Debug.Log("Saving task definition: " + newTaskDefinition);
+        //Debug.Log("Saving task definition: " + newTaskDefinition);
     }
 }

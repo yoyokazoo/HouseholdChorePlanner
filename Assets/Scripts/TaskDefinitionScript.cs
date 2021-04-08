@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
 
@@ -21,12 +19,4 @@ public class TaskDefinitionScript : MonoBehaviour
         TaskNameText.text = Name;
         TaskDescriptionText.text = Description;
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
-
 }

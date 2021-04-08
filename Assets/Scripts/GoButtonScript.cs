@@ -1,25 +1,9 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.SceneManagement;
+﻿using UnityEngine;
 
 public class GoButtonScript : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     public void OnClicked()
     {
-        // Constants File to replace these hardcoded strings
-        SceneManager.LoadScene("CurrentTaskScene");
+        SceneManagerScript.Instance.GotoScene(SceneManagerScript.CURRENT_TASK_SCENE);
     }
 }
