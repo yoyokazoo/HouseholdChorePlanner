@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-// does this need to be a monobehavior?
 public class SceneManagerScript : Singleton<SceneManagerScript>
 {
     public const string HOME_SCENE = "HomeScene";
