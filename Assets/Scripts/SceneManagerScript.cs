@@ -8,6 +8,7 @@ public class SceneManagerScript : Singleton<SceneManagerScript>
     public const string HOME_SCENE = "HomeScene";
     public const string CURRENT_TASK_SCENE = "CurrentTaskScene";
     public const string CREATE_TASK_SCENE = "CreateTaskScene";
+    public const string VIEW_TASKS_SCENE = "ViewTasksScene";
 
     Stack<string> scenes;
 
