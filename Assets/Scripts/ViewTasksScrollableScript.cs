@@ -28,7 +28,6 @@ public class ViewTasksScrollableScript : MonoBehaviour
             AddTaskDefinitionElement(dailyTasksContainer, definition);
         }
 
-        //AddNoTasksElement(dailyTasksContainer);
         AddNoTasksElement(weeklyTasksContainer);
         AddNoTasksElement(monthlyTasksContainer);
     }

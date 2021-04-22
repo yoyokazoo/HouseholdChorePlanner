@@ -24,6 +24,18 @@ public class TaskManagerScript : Singleton<TaskManagerScript>
         SaveTasksToLocal();
     }
 
+    public bool DeleteTaskDefinition(TaskDefinition definition)
+    {
+        if(tasks.Contains(definition))
+        {
+            tasks.Remove(definition);
+            SaveTasksToLocal();
+            return true;
+        }
+
+        return false;
+    }
+
     public void ClearTasksFromLocal()
     {
         if(StorageHandler.DeleteData(LOCAL_TASKS_FILE_PATH))
@@ -36,12 +48,12 @@ public class TaskManagerScript : Singleton<TaskManagerScript>
         }
     }
 
-    public void SaveTasksToLocal()
+    private void SaveTasksToLocal()
     {
         StorageHandler.SaveData(tasks, LOCAL_TASKS_FILE_PATH);
     }
 
-    public List<TaskDefinition> LoadTasksFromLocal()
+    private List<TaskDefinition> LoadTasksFromLocal()
     {
         return StorageHandler.LoadOrCreateData<List<TaskDefinition>>(LOCAL_TASKS_FILE_PATH);
     }
